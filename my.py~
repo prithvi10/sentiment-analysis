@@ -1,0 +1,18 @@
+import nltk as nltk
+from nltk.corpus import stopwords
+from nltk.collocations import BigramCollocationFinder
+from nltk.metrics import BigramAssocMeasures
+import string
+stopset=stopwords.words('english')
+f=open("news.txt",'r+')
+string_text=f.read()
+string_text.replace('\n','')
+print string_text
+ch=set(string.punctuation)
+l1=''.join(c for c in string_text if c not in ch)
+list_text=l1.split(" ")
+wordlist=[]
+for words in list_text:
+	if words not in stopset:
+		wordlist.append(words)
+print wordlist
