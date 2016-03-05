@@ -1,0 +1,31 @@
+deflagrate		0.125			0
+0
+	0
+		0.25
+0.25
+cloud_over		0			0.25
+laze		0			0
+	0.125
+n		0			0
+	0			0.125
+imperil		0			0.125
+endanger		0			0.125
+und		0			0.25
+bum_around		0			0.25
+bum_about		0			0.25
+arse_around		0			0.25
+arse_about		0			0.25
+up		0			0.75
+bollocks		0			0.75
+bollix_up		0			0.75
+bollix		0			0.75
+bodge		0			0.75
+bobble		0			0.75
+ball_up		0			0.75
+375			0.125
+eff		0.375			0.125
+do_it		0.375			0.125
+bonk		0.375			0.125
+be_intimate		0.375			0.125
+lt-onset_diabetes_mellitus		0.25			0.25
+adult-onset_diabetes		0.25			0.25
