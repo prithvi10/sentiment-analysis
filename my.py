@@ -7,15 +7,14 @@ import re
 
 neg_words=[]
 wordlist=[]
-parse_input_data()
-
+final_list=[]
+fp=open('/home/prithviraj/sentiment analysis/my_senti_wordnet.txt','r+')
 
 
 def parse_input_data():
 
 	f=open("news.txt",'r+')
 	string_text=f.read()
-
 	
 	neg_words=ngrams(string_text) 						#separates the not and never	
 
@@ -38,7 +37,7 @@ def parse_input_data():
 def ngrams(string_text):											#calculates the bigrams to separate the 'not' and 'never' statement
 	tokens=nltk.word_tokenize(string_text)								
 	bigram_finder=BigramCollocationFinder.from_words(tokens)
-	trigram_finder=
+	#trigram_finder=
 	scored=bigram_finder.nbest(BigramAssocMeasures.chi_sq,200)
 	neg_words=[]
 	regex=re.compile("('never',|'not',)")
@@ -47,5 +46,20 @@ def ngrams(string_text):											#calculates the bigrams to separate the 'not'
 
 
 
-def assign_scores():
-	
+def assign_scores():												
+	all_words_string=fp.read()
+	all_words_list=all_words_string.split("\n")
+	for i in all_words_list:
+		final_list.append(i.split("\t\t"))
+	print final_list											#final_list is the list of lists which contains the element as[word,pos_value,neg_value]
+
+	for l in final_list:
+		for m in l:
+			
+
+
+
+
+parse_input_data()
+assign_scores()
+fp.close()
